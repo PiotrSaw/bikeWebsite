@@ -1,0 +1,29 @@
+#slideshow {
+    position: relative;
+    height: 650px;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid #ff4500;
+}
+
+#slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 10px;
+}
+
+#slideshow img.active {
+    z-index: 10;
+    opacity: 1;
+}
+
+#slideshow img.last-active {
+    z-index: 9;
+}

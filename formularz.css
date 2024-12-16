@@ -1,0 +1,93 @@
+main {
+    background-color: #0a0a0a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+table{
+    display: flex;
+    justify-content: center;
+    padding-left: 24%;
+}
+
+td{
+    width: 300px;
+    text-align: left;
+}
+
+/* Pola formularza */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="date"]::placeholder,
+select::placeholder {
+    color: #777;
+}
+
+/* Checkboxy  i radiobuttony*/
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
+    appearance: none;
+}
+
+input[type="checkbox"]::before, input[type="radio"]::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {
+    content: '\2714'; /* Unicode symbol for check mark */
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    color: #ff4500; /* Red accent */
+    background-color: #444;
+}
+/* Przyciski */
+button {
+    padding: 10px 20px;
+    margin: 20px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4500; /* Red accent */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e60000; /* Darker red accent on hover */
+}
+
+.error{
+    color: red;
+    font-size: 1.2em;
+}
+
+.error img{
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}

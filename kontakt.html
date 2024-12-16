@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Master</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slide.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="slide.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="kontener">
+        <header>
+            <h1>Kontakt</h1>
+        </header>
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="rezerwacje.html">Rezerwacja</a>
+            <a href="przeglądarka.html">Sprawdź rezerwacje</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <div id="content">
+            <div id="slideshow">
+                <img src="zdjecia/rower1.jpg" alt="image1" class="active">
+                <img src="zdjecia/rower2.jpg" alt="image2">
+                <img src="zdjecia/rower3.jpg" alt="image3"> 
+                <img src="zdjecia/rower4.jpg" alt="image3">
+                <img src="zdjecia/rower5.jpg" alt="image3"> 
+                <img src="zdjecia/rower6.jpg" alt="image3"> 
+                <img src="zdjecia/rower7.jpg" alt="image3"> 
+            </div> 
+        </div> 
+           
+        <main>
+            <div id="kontakt">
+                <div id="telefon" class="kontakt">
+                    <img src="ikony/telefon.png" alt="ikona telefon">
+                    <div class="tresc">
+                        <p>telefon: 81-111-22-33</p>
+                        <p>telefon: 81-567-88-99</p>
+                    </div>
+                </div>
+                <div id="komorka" class="kontakt">
+                    <img src="ikony/telefon komórkowy.png" alt="ikona komórka">
+                    <div calss="tresc">
+                        <p>telefon komórkowy: 123-456-789</p>
+                        <p>telefon komórkowy: 111-222-333</p>
+                    </div>
+                </div>
+                <div id="email" class="kontakt">
+                    <img src="ikony/email.png" alt="ikona email">
+                    <div class="tresc">
+                        <p>email: serwis@rowery.pl</p>
+                        <p>email: naprawa@rowery.pl</p>
+                    </div>
+                </div>
+                <div id="adres" class="kontakt">
+                    <img src="ikony/adres.png" alt="ikona adres">
+                    <div class="tresc">
+                        <p>ulica Rowerowa 23a<br>20-567 Lublin</p>
+                    </div>
+                </div>
+            </div>
+            <div id="map"></div>
+            
+        </main>
+        
+        <footer>&copy;PS 2024</footer>
+    </div>
+
+    
+    <script src="mapa.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bike master </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formularz.css">
+    
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> 
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    <script src="formularz.js"></script>
+</head>
+
+<body>
+    <div id="kontener">
+        <header>
+            <h1>Zarezerwuj naprawę już dzisiaj</h1>
+        </header>
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="rezerwacje.html">Rezerwacja</a>
+            <a href="przeglądarka.html">Sprawdź rezerwacje</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+           
+        <main>
+            <h2>Wypełnij formularz żeby zarezerwować termin naprawy swojego roweru</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td colspan="2"><input type="text" id="imie" placeholder="Wprowadź imię"></td>
+                        <td><div id="errorImie" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="text" id="nazwisko" placeholder="Wprowadź nazwisko"></td>
+                        <td><div id="errorNazwisko" class="error"></div></td>
+                    </tr> 
+                    <tr>
+                        <td colspan="2"><input type="text" id="email" placeholder="Wprowadź email"></td>
+                        <td><div id="errorEmail" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="text" id="data" placeholder="Wprowadź datę" readonly></td>
+                        <td><div id="errorData" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <select id="typ">
+                                <option value="" disabled selected>Wybierz typ roweru</option>
+                                <option value="górski">Górski</option>
+                                <option value="miejski">Miejski</option>
+                                <option value="trekkingowy">Trekkingowy</option>
+                                <option value="szosowy">Szosowy</option>
+                                <option value="crossowy">Crossowy</option>
+                                <option value="bmx">BMX</option>
+                                <option value="dziecięcy">Dziecięcy</option>
+                            </select>
+                        </td>
+                        <td><div id="errorTyp" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>Co chcesz naprawiać?</h4></td>
+                        <td><div id="errorCo" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="co" value="koła" id="kola">Koła</td>
+                        <td><input type="checkbox" name="co" value="pedały" id="pedaly">Pedały</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="co" value="łańcuch" id="lancuch">Łańcuch</td>
+                        <td><input type="checkbox" name="co" value="zębatki" id="zebatki">Zębatki</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="co" value="chamulce" id="chamulce">Chamulce</td>
+                        <td><input type="checkbox" name="co" value="kierownica" id="kierownica">Kierownica</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="co" value="przerzutki" id="przerzutki">Przerzutki</td>
+                        <td><input type="checkbox" name="co" value="inne" id="inne">Inne</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h4>Sposób płatności</h4></td>
+                        <td><div id="errorPlatnosc" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="platnosc" value="gotówka" id="gotowka">Gotówka</td>
+                        <td><input type="radio" name="platnosc" value="kartaPłatnicza" id="kartaPlatnicza">Karta płatnicza</td>
+                        <td></td>
+                    </tr>                    
+                    <tr>
+                        <td><input type="radio" name="platnosc" value="blik" id="blik">Blik</td>
+                        <td><input type="radio" name="platnosc" value="kartaPodatunkowa" id="kartaPodatunkowa">Karta podarunkowa</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="password" id="haslo1" placeholder="Podaj haslo"></td>
+                        <td><div id="errorHaslo1" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="password" id="haslo2" placeholder="Powtórz haslo"></td>
+                        <td><div id="errorHaslo2" class="error"></div></td>
+                    </tr>
+                    <tr>
+                        <td><button id='rezerwuj'>Zarezerwuj</button></td>
+                        <td><button id='anuluj' onclick="anuluj()">Anuluj</button></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        
+  
+        <footer>&copy;PS 2024</footer>
+    </div>
+
+</body>
+
+</html>

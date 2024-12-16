@@ -1,0 +1,168 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+    color: #e5e5e5;
+}
+
+#kontener {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+header {
+    background: #0a0a0a;
+    color: #e5e5e5;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    border-bottom: 2px solid #ff4500;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 5em;
+    font-family: 'Gill Sans Ultra Bold Condensed';
+    color: #ff4500;
+}
+
+nav {
+    background: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #ff4500;
+}
+
+nav a {
+    color: #e5e5e5;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #ff4500;
+    color: #1a1a1a;
+}
+
+#content {
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+main h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #ff4500;
+}
+
+main p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #e5e5e5;
+}
+
+footer {
+    background: #0a0a0a;
+    color: #e5e5e5;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #ff4500;
+}
+
+.kontakt{
+    margin-bottom: 20px;
+    margin-left: 80px;
+    display: flex;
+}
+
+#kontakt{
+    display: flex;
+    justify-content: center;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.kontakt img, #wyszukiwarka img{
+    height: 50px;
+    width: 50px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    nav a {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    #slideshow{
+        height: 300px;
+    }
+}
+
+@media (max-width: 850px) and (min-width: 600px){
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    nav a {
+        margin: 5px 0;
+        width: 40%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 750px) and (min-width: 600px) {
+    #slideshow{
+        height: 400px;
+    }
+}
+
+@media (max-width: 1370px) and (min-width: 845px){
+    #kontakt{
+        flex-wrap: wrap;
+    }
+
+    .kontakt{
+        width: 40%;
+    }
+}
+
+@media (max-width: 845px){
+    #kontakt{
+        flex-wrap: wrap;
+    }
+
+    .kontakt{
+        width: 80%;
+    }
+}

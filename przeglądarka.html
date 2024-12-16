@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bike master </title>
+    <link rel="stylesheet" href="style.css">
+    <link id="styl" rel="stylesheet" href="przegladarka.css">
+    
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> 
+    </script><script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    <script src="przegladarka.js"></script>
+</head>
+
+<body>
+    <div id="kontener">
+        <header>
+            <h1 id="naglowek">Obecne rezerwacje</h1>
+        </header>
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="rezerwacje.html">Rezerwacja</a>
+            <a href="przeglądarka.html">Sprawdź rezerwacje</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+
+        <div id="wyszukiwarka">
+            <img src="ikony/lupa.png" alt="ikona lupa">
+            <input type="text" id="filtr" placeholder="Wyszukaj po nazwisku" oninput="utworz()">
+        </div>
+           
+        <main id="przegladarka">
+        </main>
+        
+  
+        <footer>&copy;PS 2024</footer>
+    </div>
+
+</body>
+
+</html>
